@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello MatieresController!{% endblock %}
+
+{% block body %}
+{# templates/base.html.twig #}
+
+{# beware that the blocks in your template may be named different #}
+
+{{ form (form)}}
+
+
+
+
+{% if matieres is not empty %}
+       {% for matiere in matieres %}
+              
+       <table>
+       <tr> 
+       <th> Subject :</th>
+       <td>  {{matiere.nom}}  </td>
+       <tr/>
+       </table>
+       <a href="{{ path('app_matiere',{'id': matiere.id})}}"> Detail</a>
+       {% endfor %}
+ {% else %}
+       
+             <p>No data </p> 
+ {% endif %}
+
+        {% if matieres is not empty %}
+ {% endif %}
+
+
+{% endblock %}

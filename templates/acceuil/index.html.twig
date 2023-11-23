@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AcceuilController!{% endblock %}
+
+{% block body %}
+{{ form_start (form)}}
+
+      {{ form_errors (form) }}  
+ {{ form (form)}}
+ {{ form_end (form) }}
+{#
+
+{{ form_start (form)}}
+
+      {{ form_errors (form) }}          
+      {{ form. (note.matiere) }}
+       {{ form.coefficient (notes.matieres.coefficient) }}
+       {{ form.note (notes.note) }}
+{{ form_end (form) }}
+
+
+ #}
+ {# 
+{% if notes is not empty %}
+       {% for note in notes %}
+              
+       <table>
+       <tr> 
+       <th> Subject :</th>
+       <td>  {{note.matiere.nom}}  </td>
+       <th> Note :</th>
+       <td>  {{note.note}}  </td>
+       <th> coefficient :</th>
+       <td>  {{note.matiere.coefficient}}  </td>
+       <th> date</th>
+       <td>  {{note.date  datetime("m/d/Y h:m:s")}}  </td>
+       <tr/>
+       </table>
+      
+       {% endfor %}
+ {% else %}
+       
+             <p>No data </p> 
+ {% endif %}
+
+        {% if notes is not empty %}
+ {% endif %} #}
+
+
+
+{% endblock %} 
